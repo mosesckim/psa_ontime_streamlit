@@ -1,0 +1,56 @@
+data_path: data
+
+macro_features:
+  - retail_sales
+  # - cpi
+  # - crude_oil
+
+schedule:
+  filename: 2022-11-29TableMapping_Reliability-SCHEDULE_RELIABILITY_PP.csv
+port_call:
+  filename: Port_Performance.xlsx
+  sheet: PSA_PortPerformance_20220914
+crude_oil:
+  filename: world_bank_crude_oil_spot_price.xlsx
+  sheet: Sheet1
+sales:
+  filename: Retail Sales 202210.xlsx
+  sheet: Sales
+cpi:
+  filename: CPI Core 202210.xlsx
+  sheet: Core CPI
+xeneta:
+  filename: Xeneta Benchmarks and Carrier Spread 2022-08-29 08_33 FEWB.xlsx
+  sheet: Raw Data (Carrier Spread)
+freight:
+  data_path: data
+  FEEB:
+    filename: Xeneta Freight Rates_FEEB_N. Europe to Far East_DFE.xlsx
+    sheet: N. Europe to Far East
+  FEWB:
+    filename: Xeneta Freight Rates_FEWB_Far East to N. Europe_DFE.xlsx
+    sheet: Far East to N. Europe
+  TAEB:
+    filename: Xeneta Freight Rates_TAEB_USEC to N. Europe_DFE.xlsx
+    sheet: USEC to N.Europe
+  TAWB:
+    filename: Xeneta Freight Rates_TAWB_N. Europe to USEC_DFE.xlsx
+    sheet: N. Europe to USEC
+  TPEB:
+    filename: Xeneta Freight Rates_TPEB_Far East to USWC_DFE.xlsx
+    sheet: Far East to USWC
+  TPWB:
+    filename: Xeneta Freight Rates_TPWB_USWC to Far East_DFE.xlsx
+    sheet: USWC to Far East
+
+air_freight:
+  filename: AirFrieght total Rate USD per 1000kg Shanghai to Los angeles.xlsx
+  sheet: Sheet1
+
+bdi:
+  filename: BDI 202210.xlsx
+  sheet: BDI
+
+ind:
+  filename: Industrial Production 202210.xlsx
+  sheet: IndustrialProduction
