@@ -724,7 +724,7 @@ def get_feat_imp_df(importance, names, topn=10):
     return fi_df
 
 
-@st.experimental_memo(ttl=600)
+@st.cache_data(ttl=600)
 def load_excel_data(config: dict, data_name: str):
     """Load excel data corresp. to data name
 

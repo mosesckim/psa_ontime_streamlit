@@ -19,7 +19,7 @@ from baseline import BaselineModel
 
 
 
-@st.experimental_memo(ttl=600)
+@st.cache_data(ttl=600)
 def load_excel_data(config: dict, data_name: str):
     """Load excel data corresp. to data name
 
@@ -57,8 +57,8 @@ st.title("PSA-ONTIME")
 st.subheader("Introduction")
 
 st.write("We train a baseline (aggregate) model on shipping schedule data by \
-    carrier and service and evaluate it by choosing a time horizon \
-    (June by default). In order to gauge model performance, we compute an MAPE \
+    carrier and service and evaluate it by choosing a time horizon. \
+    In order to gauge model performance, we compute an MAPE \
     (or mean average percentage error), where percentage error is given as below:"
 )
 
@@ -543,7 +543,6 @@ if partial_pred or overall_pred:
         df_preds.loc[:, "perc_error"] = (preds - val_y_filtered) / val_y_filtered
         st.write(df_preds)
 
-        st.write(f"baseline val shape: {df_preds.shape}")
 
         if overall_pred:
             st.subheader("Error Analysis")
