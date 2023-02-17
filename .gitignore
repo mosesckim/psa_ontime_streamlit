@@ -1,0 +1,6 @@
+service_acct/
+.streamlit/
+__pycache__/
+.vscode/
+*.xlsx
+*.csv
